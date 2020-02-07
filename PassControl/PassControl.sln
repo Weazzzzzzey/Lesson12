@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassControl", "PassControl\PassControl.csproj", "{96F17BA2-1734-4691-B824-3DC005839A54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassControlTest", "PassControlTest\PassControlTest.csproj", "{E7BEF1F3-3960-47AB-9E84-FA3B63F5326F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassControlBussinesLayer", "PassControlBussinesLayer\PassControlBussinesLayer.csproj", "{8111B740-035B-439E-994E-A80B578A3666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{96F17BA2-1734-4691-B824-3DC005839A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F17BA2-1734-4691-B824-3DC005839A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F17BA2-1734-4691-B824-3DC005839A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7BEF1F3-3960-47AB-9E84-FA3B63F5326F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BEF1F3-3960-47AB-9E84-FA3B63F5326F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BEF1F3-3960-47AB-9E84-FA3B63F5326F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BEF1F3-3960-47AB-9E84-FA3B63F5326F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8111B740-035B-439E-994E-A80B578A3666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8111B740-035B-439E-994E-A80B578A3666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8111B740-035B-439E-994E-A80B578A3666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8111B740-035B-439E-994E-A80B578A3666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

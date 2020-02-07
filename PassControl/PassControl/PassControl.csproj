@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PassControlBussinesLayer\PassControlBussinesLayer.csproj">
+      <Project>{8111b740-035b-439e-994e-a80b578a3666}</Project>
+      <Name>PassControlBussinesLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
