@@ -16,6 +16,18 @@ namespace PassControl
             GateRepository VisiVartai = new GateRepository();
             EventController EC = new EventController(VisiDarbuotojai, VisiVartai);
             EC.TryPass(0,"Rytiniai vartai");
+            EC.TryPass(2,"Rytiniai vartai");
+            EC.TryPass(4,"Vakariniai vartai");
+            EC.TryPass(1,"Pietiniai vartai");
+            EC.TryPass(10,"Siauriniai vartai");
+
+            List<Event> ivykditiE =  EC.Retrieve();
+            foreach (var item in ivykditiE)
+            {
+                Console.WriteLine(item.EventsID);
+                Console.WriteLine(item.Pass);
+
+            }
             Console.ReadLine();
         }
     }

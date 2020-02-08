@@ -26,14 +26,16 @@ namespace PassControlBussinesLayer
             Emploee vienasDarbuotojas = visuDarbuotojuRepo.Retrieve(emploeeID);
             Gate iejimas = VieniIsVartu.Retrieve(humanisticID);
             turiGateTeise = vienasDarbuotojas.RightsList().Contains(iejimas.GateID);
-            Console.WriteLine("{0}", turiGateTeise);
 
             Eventai.Add(new Event(EventID, emploeeID,iejimas.GateID,DateTime.Now,turiGateTeise));
             EventID++;
             return turiGateTeise;
         }
 
-
+        public List<Event> Retrieve()
+        {
+            return Eventai;
+        }
 
     }
 }
