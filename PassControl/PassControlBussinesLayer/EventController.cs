@@ -10,26 +10,23 @@ namespace PassControlBussinesLayer
     {
         private List<Event> Eventai;
         private EmploeeRepository visuDarbuotojuRepo;
-        private GateRepository VieniIsVartu;
-        public int EventID = 0;
 
-        public EventController(EmploeeRepository er, GateRepository gr)
+        public EventController(EmploeeRepository er)
         {
             Eventai = new List<Event>();
             visuDarbuotojuRepo = er;
-            VieniIsVartu = gr;
+ 
         }
         
-        public bool TryPass (int emploeeID, string humanisticID) //0 darbuotojas 1-2 gate "Rytiniai vartai" 2
+        public bool TryPass (int emploeeID, int varetliuID) //0 darbuotojas 1-2 gate "Rytiniai vartai" 2
         {
             bool turiGateTeise = false;
             Emploee vienasDarbuotojas = visuDarbuotojuRepo.Retrieve(emploeeID);
-            Gate iejimas = VieniIsVartu.Retrieve(humanisticID);
-            turiGateTeise = vienasDarbuotojas.RightsList().Contains(iejimas.GateID);
-
-            Eventai.Add(new Event(EventID, emploeeID,iejimas.GateID,DateTime.Now,turiGateTeise));
-            EventID++;
+            turiGateTeise = vienasDarbuotojas.HasRight(varetliuID);
+            
+            Eventai.Add(new Event(Guid.NewGuid(), emploeeID,varetliuID,DateTime.Now,turiGateTeise));
             return turiGateTeise;
+            
         }
 
         public List<Event> Retrieve()

@@ -48,6 +48,9 @@
     <Compile Include="EmploeeRepository.cs" />
     <Compile Include="GateRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportEvents.cs" />
+    <Compile Include="ReportGenerator.cs" />
+    <Compile Include="ReportTotalHours.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

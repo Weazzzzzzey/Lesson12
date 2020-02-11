@@ -22,9 +22,12 @@ namespace PassControlBussinesLayer
             this.GetIdRights = rights;
         }
 
-        public List<int> RightsList()
+        public bool HasRight(int gateID)
         {
-            return GetIdRights;
+            bool turiGateTeise;
+            turiGateTeise = GetIdRights.Contains(gateID);
+
+            return turiGateTeise;
         }
     }
 }
